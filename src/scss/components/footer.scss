@@ -1,0 +1,122 @@
+@import "../config/functions";
+@import "../config/mixins";
+
+.footer {
+	background: url('../images/4.jpg') no-repeat;
+	background-size: cover;
+	padding: 104px 0 0;
+
+	&_wrapper {
+		display: flex;
+		align-items: flex-start; 
+    justify-content: space-between;
+    padding-bottom: 190px;
+
+		@include media-mx(991) {
+			flex-direction: column;
+			align-items: center;
+			gap: 30px;
+			padding-bottom: 50px;
+		}
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		max-width: 106px;
+
+		img {
+			width: 100%;
+    	height: auto;
+		}
+	}
+
+	&__menu {
+		display: flex;
+		gap: 40px;
+
+		@include media-mx(991) {
+			flex-direction: column;
+			text-align: center;
+		}
+
+		.menu {
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+			width: 186px;
+
+			&__title {
+				color: white;
+				font-size: 18px;
+				font-weight: 700;
+			}
+
+			&__list {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+
+				a {
+					color: white;
+					line-height: 1.4;
+
+					&:hover {
+						color: var(--primary-color);
+					}
+				}
+			}
+		}
+	}
+
+	&__copyright {
+		padding: 28px 0;
+    background: #000103;
+
+		.copyright__container {
+			display: flex;
+			justify-content: space-between;
+			gap: 10px;
+
+			@include media-mx(991) {
+				flex-direction: column-reverse;
+				align-items: center;
+				text-align: center;
+				gap: 20px;
+			}
+	
+			p {
+				color: white;
+				font-size: 12px;
+			}
+	
+			ul {
+				display: flex;
+				gap: 16px;
+	
+				li {
+					width: 24px;
+					height: 24px;
+					border-radius: 50%;
+					overflow: hidden;
+					background: #191A1B;
+	
+					a {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						width: 100%;
+						height: 100%;
+	
+						img {
+							max-width: 12px;
+							width: auto;
+							max-height: 12px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

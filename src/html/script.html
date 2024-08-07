@@ -1,0 +1,34 @@
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/main.min.js" defer></script>
+
+<script>
+  $(document).ready(function() {
+    function toggleDropdown() {
+      if ($(window).width() <= 991) {
+        $('.has-dropdown > a i').on('click', function(e) {
+          e.preventDefault();
+          $(this).parent().parent().toggleClass('dropdown-open');
+        });
+      } else {
+        $('.has-dropdown > a i').off('click');
+      }
+    }
+
+    toggleDropdown();
+    
+    $(window).resize(function() {
+      toggleDropdown();
+    });
+  });
+
+  var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    effect: "fade",
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+  });
+</script>

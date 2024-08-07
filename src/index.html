@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Главная'
+  })
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html')
+
+      <main class="page">
+        <div data-observ></div>
+
+        @@include('html/sections/intro.html')
+        @@include('html/sections/works.html')
+        @@include('html/sections/awards.html')
+        @@include('html/sections/comment.html')
+        @@include('html/sections/ai.html')
+        @@include('html/sections/train.html')
+        @@include('html/sections/feedback.html')
+
+      </main>
+
+      @@include('html/footer.html')
+    </div>
+
+    @@include('html/script.html')
+  </body>
+</html>
